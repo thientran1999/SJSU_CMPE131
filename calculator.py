@@ -46,4 +46,3 @@ def input_output():
         except ValueError:
         	print('invalid input')
 
-input_output()
