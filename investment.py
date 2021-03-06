@@ -12,11 +12,12 @@ value: float
 	the total money after the years that put in invest 
 """
 def calculate_apr(principal, interest_rate, years):
+    i = 1
     value = 0.0
-    for i in range(years+1):
-        value += principal(1+interest_rate)
+    while i<=years:
+        value = value + principal*(1+interest_rate)
+        i+=1
     if isinstance(value, float):
         print(value)
     else:
         print("False")
-
