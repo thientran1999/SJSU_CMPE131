@@ -14,14 +14,15 @@ value: float
 def calculate_apr(principal, interest_rate, years):
     i = 1
     value = 0.0
-    if isinstance(principal, int) or isinstance(principal, float):
+
+    if principal.isdigit()== False:
         return (str)(False)
-    elif isinstance(interest_rate, float) or isinstance(interest_rate, int):
+    elif interest_rate.isdigit()== False: 
         return (str)(False)
-    elif isinstance(years, int) or isinstance(years, float):
+    elif year.isdigit() == False: 
         return (str)(False)
     while i <= years:
         value = value + principal * (1 + interest_rate)
         i+=1
-    return value
+    return (float)(value)
 
