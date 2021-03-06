@@ -14,10 +14,7 @@ value: float
 def calculate_apr(principal, interest_rate, years):
     i = 1
     value = 0.0
-    if principal is None or principal is float:
-        principal = (float)(principal)
-    if years is None or years is float:
-        years = (int)(years)
+  
     while i<=years:
         value = value + principal*(1+interest_rate)
         i+=1
