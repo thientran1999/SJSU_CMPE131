@@ -19,6 +19,8 @@ def calculator(number1, number2, operator):
         return number1 ** number2
     elif operator == '/':
         return number1 / number2
+    elif operator == '//':
+        return number1 // number2
     elif operator == '-':
         return number1 - number2
     else:
