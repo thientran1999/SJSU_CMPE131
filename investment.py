@@ -17,7 +17,7 @@ def calculate_apr(principal, interest_rate, years):
     while i<=years:
         value = value + principal*(1+interest_rate)
         i+=1
-    if isinstance(value, float):
+    if isinstance(value, float) or isinstance(value, int) or isinstance(value, None):
         print(value)
     else:
         print("False")
