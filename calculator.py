@@ -1,9 +1,9 @@
 """
 Calculate the number with the operator
 Parameter
-number1: int
+number1: float
 	First number to calculate
-number2: int
+number2: float
 	second number to calculate
 operator: str
 	the operation
@@ -16,7 +16,7 @@ def calculator(number1, number2, operator):
     elif operator == '+':
         return number1 + number2
     elif operator == '**':
-        return float(number1 ** number2)
+        return number1 ** number2
     elif operator == '/':
         return number1 / number2
     elif operator == '-':
@@ -45,6 +45,5 @@ def input_output():
                 	print('invalid input')
         except ValueError:
         	print('invalid input')
-       
 
 input_output()
