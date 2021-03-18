@@ -18,13 +18,17 @@ def calculator(number1, number2, operator):
     elif operator == '**':
         return number1 ** number2
     elif operator == '/':
+        if number2 == 0:
+            return ValueError('invalid input')
         return number1 / number2
     elif operator == '//':
+        if number2 == 0:
+            return ValueError('invalid input')
         return number1 // number2
     elif operator == '-':
         return number1 - number2
     else:
-        return 'invalid operator'
+        return False
 
 """
 Take the input to calculator and print out the input

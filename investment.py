@@ -14,11 +14,11 @@ value: float
 def calculate_apr(principal, interest_rate, years):
     i = 1
     value = 0.0
-  
+    if years == 0:
+        return principal
+    if not principe or not interest_rate or not year:
+        return False
     while i<=years:
         value = value + principal*(1+interest_rate)
         i+=1
-    if isinstance(value, float):
-        print(value)
-    else:
-        print("False")
+
