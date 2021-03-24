@@ -21,4 +21,5 @@ def calculate_apr(principal, interest_rate, years):
     while i<=years:
         value = value + principal*(1+interest_rate)
         i+=1
+    return value
 
