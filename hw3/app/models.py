@@ -12,7 +12,9 @@ class User(db.Model):
     message = db.relationship('Messages', backref='message', lazy='dynamic' )
     
     def check_author(self, author):
-        return check_password_hash(self.author, author) 
+        if author != self.author:
+            return False
+        return True
     def __repr__(self):
         return f'<User {self.author}>'
 
