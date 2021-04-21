@@ -1,6 +1,5 @@
 from app import db
 
-from werkzeug.security import check_password_hash
 class User(db.Model):
     # have the following columns
     # id (int)
@@ -9,9 +8,11 @@ class User(db.Model):
     __tablename__ = 'user'
     id = db.Column(db.Integer, primary_key = True)
     author = db.Column(db.String, nullable=False, unique=True)
-    message = db.relationship('Messages', backref='message', lazy='dynamic' )
+    message = db.relationship('Messages', backref='author', lazy='dynamic' )
     
     def check_author(self, author):
+        #Check if the author exits in database or not
+        #then return False for not and True for exist 
         if author != self.author:
             return False
         return True

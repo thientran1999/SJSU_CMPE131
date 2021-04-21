@@ -4,7 +4,7 @@
     <h1>Send messages</h1>
     {% for post in posts %}
     <div>
-        <p> {{ post.author }} : {{ post.message}} </p>
+        <p><strong>{{ post.author }}</strong>: {{ post.message}} </p>
     </div>
     {% endfor %}
     <form action="" method="post" novalidate>
