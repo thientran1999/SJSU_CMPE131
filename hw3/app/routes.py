@@ -25,11 +25,11 @@ def home():
             db.session.commit()
             
             
-        db.session.refresh(user)
+        #db.session.refresh(user)
         message = Messages(user_id = user.id, message = form.message.data)
         db.session.add(message)
         db.session.commit()
-        db.session.refresh(message)
+        #db.session.refresh(message)
     #create the list of messages with the Users
     messageList = (db.session.query(User, Messages)
         .join(User)
